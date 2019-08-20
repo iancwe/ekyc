@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="assets/css/progress-wizard.min.css">
     <link rel="stylesheet" href="assets/css/stylesheet.css">
     <meta charset="utf-8">
-    <title>Tab 1</title>
+    <title>Tab 3</title>
   </head>
   <body>
     <div class="container">
@@ -28,23 +28,19 @@
                   <span class="bubble" onclick="changePage(4)"></span>
                   Step 4.
               </li>
-              <li id="progress-5" class="">
-                  <span class="bubble" onclick="changePage(5)"></span>
-                  Step 5.
-              </li>
           </ul>
       </div>
       <div class="main-area">
         <div class="side-tab">
-          <div class="tab active">Tab 1</div>
+          <a href="index.html" class="a-flat"><div class="tab">Tab 1</div></a>
           <a href="tab2.html" class="a-flat"><div class="tab">Tab 2</div></a>
-          <a href="tab3.html" class="a-flat"><div class="tab">Tab 3</div></a>
+          <div class="tab active">Tab 3</div>
         </div>
         <div class="content p20">
           <!-- Start of different pages -->
 
           <div id="page-1" class="show">
-            <h3 align="center">Tab 1 Step 1</h3>
+            <h3 align="center">Tab 3 Step 1</h3>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sit amet varius turpis. Vestibulum porta augue et auctor accumsan. Maecenas sed eleifend libero. Nam libero tellus, pharetra sed odio at, tincidunt finibus dui. Nam maximus scelerisque pretium. 
               Interdum et malesuada fames ac ante ipsum primis in faucibus. Maecenas sodales vel libero vel scelerisque.
             </p>
@@ -68,7 +64,7 @@
           </div>
 
           <div id="page-2" class="hide">
-            <h3 align="center">Tab 1 Step 2</h3>
+            <h3 align="center">Tab 3 Step 2</h3>
             <form>
               <div class="form-group">
                 <label for="email">Email Address 2</label>
@@ -86,7 +82,7 @@
           </div>
 
           <div id="page-3" class="hide">
-            <h3 align="center">Tab 1 Step 3</h3>
+            <h3 align="center">Tab 3 Step 3</h3>
             <form>
               <div class="form-group">
                 <label for="email">Email Address 3</label>
@@ -104,7 +100,7 @@
           </div>
 
           <div id="page-4" class="hide">
-            <h3 align="center">Tab 1 Step 4</h3>
+            <h3 align="center">Tab 3 Step 4</h3>
             <form>
               <div class="form-group">
                 <label for="email">Email Address 4</label>
@@ -112,24 +108,6 @@
               </div>
               <div class="form-group">
                 <label for="fullname">Full Name 4</label>
-                <input type="text" class="form-control" id="fullname" placeholder="Full name">
-              </div>
-              <div align="right">
-                <button type="button" class="btn btn-primary" onclick="backPage()">Back</button>
-                <button type="button" class="btn btn-primary" onclick="nextPage()">Next</button>
-              </div>
-            </form>
-          </div>
-
-          <div id="page-5" class="hide">
-            <h3 align="center">Tab 1 Step 5</h3>
-            <form>
-              <div class="form-group">
-                <label for="email">Email Address 5</label>
-                <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Email address">
-              </div>
-              <div class="form-group">
-                <label for="fullname">Full Name 5</label>
                 <input type="text" class="form-control" id="fullname" placeholder="Full name">
               </div>
               <div align="right">
@@ -148,9 +126,9 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
   <script>
-    var current_section = 1;
+    var current_section = 3;
     var current_page = 1;
-    var allSteps = 5;
+    var allSteps = 4;
 
     function nextPage() {
       $('#page-'+current_page).removeClass('show');
