@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="assets/css/progress-wizard.min.css">
     <link rel="stylesheet" href="assets/css/stylesheet.css">
     <meta charset="utf-8">
-    <title>Tab 1</title>
+    <title>Fact Find</title>
   </head>
   <body>
     <div class="container">
@@ -14,55 +14,101 @@
           <ul class="progress-indicator">
               <li id="progress-1" class="completed">
                   <span class="bubble" onclick="changePage(1)"></span>
-                  Step 1.
+                  Personal Particulars
               </li>
               <li id="progress-2" class="">
                   <span class="bubble" onclick="changePage(2)"></span>
-                  Step 2.
+                  Financial Goals
               </li>
               <li id="progress-3" class="">
                   <span class="bubble" onclick="changePage(3)"></span>
-                  Step 3.
+                  Summary
               </li>
               <li id="progress-4" class="">
                   <span class="bubble" onclick="changePage(4)"></span>
-                  Step 4.
+                  Assets
               </li>
               <li id="progress-5" class="">
                   <span class="bubble" onclick="changePage(5)"></span>
-                  Step 5.
+                  Liabilities
               </li>
           </ul>
       </div>
       <div class="main-area">
         <div class="side-tab">
-          <div class="tab active">Tab 1</div>
-          <a href="tab2.html" class="a-flat"><div class="tab">Tab 2</div></a>
-          <a href="tab3.html" class="a-flat"><div class="tab">Tab 3</div></a>
+          <div class="tab active">Fact Find</div>
+          <a href="tab2.html" class="a-flat"><div class="tab">Need Analysis</div></a>
+          <a href="tab3.html" class="a-flat"><div class="tab">Recommend</div></a>
         </div>
         <div class="content p20">
           <!-- Start of different pages -->
 
           <div id="page-1" class="show">
-            <h3 align="center">Tab 1 Step 1</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sit amet varius turpis. Vestibulum porta augue et auctor accumsan. Maecenas sed eleifend libero. Nam libero tellus, pharetra sed odio at, tincidunt finibus dui. Nam maximus scelerisque pretium. 
-              Interdum et malesuada fames ac ante ipsum primis in faucibus. Maecenas sodales vel libero vel scelerisque.
+            <h2 align="center">Personal Particulars</h2>
+            <p style="font-size:15px" align="center">
+              Please provide us with a summary of your personal details for our records:
             </p>
-            <p>
-                Sed sodales dolor ac nisi iaculis, ut sodales diam blandit. Vivamus luctus pharetra leo, id facilisis neque vulputate eget. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis porttitor sem lectus, a consectetur mauris commodo ac. Vivamus facilisis nibh nec ipsum tempus, ac tempor sem mollis. Curabitur congue arcu felis. Quisque non libero mi. Donec elementum arcu finibus, 
-                venenatis nunc eu, dignissim nunc. Duis eget lorem tempor, dapibus quam sed, viverra felis.
-              </p>
             <form>
-              <div class="form-group">
-                <label for="email">Email Address</label>
-                <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Email address">
-              </div>
-              <div class="form-group">
-                <label for="fullname">Full Name</label>
-                <input type="text" class="form-control" id="fullname" placeholder="Full name">
-              </div>
-              <div align="right">
-                <button type="button" class="btn btn-primary" onclick="nextPage()">Next</button>
+              <div>
+                <h5>Personal Details</h5>
+                <div class="form-group">
+                  <label for="title">Title</label><br />
+                  <input type="radio" name="title" value="Mr"> Mr
+                  <input type="radio" name="title" value="Mrs"> Mrs
+                  <input type="radio" name="title" value="Miss"> Miss
+                  <input type="radio" name="title" value="Ms"> Ms
+                  <input type="radio" name="title" value="Dr"> Dr
+                </div>
+                <div class="form-group">
+                  <label for="fullname">Full Name (As Per NRIC / Passport):</label>
+                  <input type="text" class="form-control" id="fullname" placeholder="John Doe">
+                </div>
+                <div class="form-group">
+                  <label for="email">Email Address:</label>
+                  <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="john.doe@finexis.co">
+                </div>
+                <div class="form-group">
+                  <label for="dob">Date of Birth:</label>
+                  <input type="date" class="form-control" id="dob">
+                </div>
+                <div class="form-group">
+                  <label for="gender">Gender:</label><br />
+                  <input type="radio" name="gender" value="Male"> Male
+                  <input type="radio" name="gender" value="Female"> Female
+                </div>
+                <div class="form-group">
+                  <label for="maritalstatus">Marital Status:</label><br />
+                  <input type="radio" name="maritalstatus" value="Single"> Single
+                  <input type="radio" name="maritalstatus" value="Married"> Married
+                  <input type="radio" name="maritalstatus" value="Divorced"> Divorced
+                  <input type="radio" name="maritalstatus" value="Seperated"> Seperated
+                  <input type="radio" name="maritalstatus" value="Widowed"> Widowed
+                </div>
+                <div class="form-group">
+                  <label for="smoker">Smoker:</label><br />
+                  <input type="radio" name="smoker" value="Yes"> Yes
+                  <input type="radio" name="smoker" value="No"> No
+                </div>
+                <div class="form-group">
+                  <label for="nationality">Nationality:</label><br />
+                  <input type="radio" name="nationality" value="SingaporeCitizen" onclick="hideNationality()"> Singapore Citizen
+                  <input type="radio" name="nationality" value="SingaporePR" onclick="showNationality()"> Singapore PR
+                  <input type="radio" name="nationality" value="Others" onclick="showNationality()"> Others
+                </div>
+                <div class="hide" id="nationalityShow">
+                  <label for="nationality">Please Specify:</label><br />
+                  <input type="text" class="form-control" >
+                </div>
+                <div class="form-group">
+                  <label for="address1">Residential Address (As Per NRIC):</label>
+                  <p style="font-size:12px">
+                    (Documentary proof is required for foreigners and if it is different from the NRIC)
+                  </p>
+                  <input type="text" class="form-control" id="address1">
+                </div>
+                <div align="right">
+                  <button type="button" class="btn btn-primary" onclick="nextPage()">Next</button>
+                </div>
               </div>
             </form>
           </div>
@@ -188,6 +234,14 @@
         }
 
       }
+    }
+
+    function showNationality(){
+      document.getElementById('nationalityShow').className ='show';
+    }
+
+    function hideNationality(){
+      document.getElementById('nationalityShow').className ='hide';
     }
   </script>
 </html>
